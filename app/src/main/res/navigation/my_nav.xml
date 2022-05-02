@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.foodrecipes.ui.fragments.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_homeFragment_to_recipesBottomSheetFragment"
+            app:destination="@id/recipesBottomSheetFragment" />
+        <argument
+            android:name="recipesFromSheet"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailsActivity"
+            app:destination="@id/detailsActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.foodrecipes.ui.fragments.favorite.FavoriteFragment"
+        android:label="Favorites" />
+    <fragment
+        android:id="@+id/jokesFragment"
+        android:name="com.example.foodrecipes.ui.fragments.jokes.JokesFragment"
+        android:label="Jokes" />
+    <dialog
+        android:id="@+id/recipesBottomSheetFragment"
+        android:name="com.example.foodrecipes.ui.fragments.home.RecipesBottomSheetFragment"
+        android:label="fragment_recipes_bottom_sheet"
+        tools:layout="@layout/fragment_recipes_bottom_sheet" >
+        <action
+            android:id="@+id/action_recipesBottomSheetFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </dialog>
+    <activity
+        android:id="@+id/detailsActivity"
+        android:name="com.example.foodrecipes.ui.DetailsActivity"
+        android:label="activity_details"
+        tools:layout="@layout/activity_details" >
+        <argument
+            android:name="result"
+            app:argType="com.example.foodrecipes.model.Result" />
+    </activity>
+</navigation>
