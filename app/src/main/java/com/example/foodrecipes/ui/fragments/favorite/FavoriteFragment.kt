@@ -20,7 +20,7 @@ class FavoriteFragment : Fragment() {
 
     private val  mainViewModel: MainViewModel by viewModels()
     private lateinit var binding: FragmentFavoriteBinding
-    private val adapter: FavoriteRecipesAdapter by lazy { FavoriteRecipesAdapter() }
+    private val adapter: FavoriteRecipesAdapter by lazy { FavoriteRecipesAdapter(requireActivity()) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

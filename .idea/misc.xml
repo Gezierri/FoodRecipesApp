@@ -27,6 +27,7 @@
         <entry key="app/src/main/res/layout/place_holder_row.xml" value="0.11875" />
         <entry key="app/src/main/res/layout/recipes_row.xml" value="0.2604166666666667" />
         <entry key="app/src/main/res/menu/details_menu.xml" value="0.25" />
+        <entry key="app/src/main/res/menu/favorite_contextual_menu.xml" value="0.22" />
         <entry key="app/src/main/res/menu/menu_bottom_navigation.xml" value="0.26145833333333335" />
         <entry key="app/src/main/res/menu/menu_home_search.xml" value="0.26145833333333335" />
         <entry key="app/src/main/res/menu/menu_search.xml" value="0.26145833333333335" />
