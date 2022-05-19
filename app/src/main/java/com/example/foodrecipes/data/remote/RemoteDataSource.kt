@@ -1,8 +1,10 @@
 package com.example.foodrecipes.data.remote
 
 import com.example.foodrecipes.data.network.FoodRecipesApi
+import com.example.foodrecipes.model.FoodJoke
 import com.example.foodrecipes.model.FoodRecipes
 import retrofit2.Response
+import retrofit2.http.Query
 import javax.inject.Inject
 
 class RemoteDataSource @Inject constructor(
@@ -14,4 +16,6 @@ class RemoteDataSource @Inject constructor(
 
     suspend fun searchRecipes(queries: Map<String, String>): Response<FoodRecipes> =
         foodRecipesApi.searchRecipes(queries)
+
+    suspend fun getFoodJoke(apiKey: String): Response<FoodJoke> = foodRecipesApi.getFoodJoke(apiKey)
 }
