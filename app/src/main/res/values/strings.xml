@@ -46,5 +46,7 @@
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
     <string name="share">Share</string>
     <string name="save_favorite">Save Favorite</string>
+    <string name="delete_all_favorites">Delete all</string>
+
 
 </resources>
